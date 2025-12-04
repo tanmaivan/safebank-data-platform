@@ -1,0 +1,17 @@
+{
+  "name": "safebank-core-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres-safebank",
+    "database.port": "5432",
+    "database.user": "safebank",
+    "database.password": "safebank",
+    "database.dbname": "safebank",
+    "database.server.name": "sb-server",
+    "table.include.list": "public.person,public.account,public.transfer,public.branch,public.merchant,public.device,public.sign_in,public.loan_account,public.loan_payment,public.currency,public.channel,public.exchange_rate",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "core",
+    "slot.name": "debezium_core_slot",
+    "decimal.handling.mode": "double"
+  }
+}
